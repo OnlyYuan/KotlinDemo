@@ -84,6 +84,6 @@ dependencies {
     // optional - Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
 
-    compileOnly(name: 'common_0.0.1', ext: 'aar')
+    //compileOnly(name: 'common_0.0.1', ext: 'aar')
 
 }
