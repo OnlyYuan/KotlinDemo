@@ -3,43 +3,46 @@ package com.example.kotlindemo
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import androidx.fragment.app.Fragment
-import com.example.kotlindemo.fragment.BlankFragment1
-import com.example.kotlindemo.fragment.BlankFragment2
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.kotlindemo.adapter.MainMenuAdapter
+import com.example.kotlindemo.databinding.ActivityMainUIBinding
+import com.example.kotlindemo.view.TrieTreeActivity
 
 
-class MainUIActivity : Activity(), View.OnClickListener {
+class MainUIActivity : Activity(){
 
-    lateinit var viewPagerbtn: Button
-
-
+    lateinit var mBinding:ActivityMainUIBinding
+    private val mTitle = arrayOf("前缀树")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main_u_i)
+        mBinding = DataBindingUtil.setContentView(this,R.layout.activity_main_u_i)
 
         initView()
-        initLinsener()
-    }
 
+    }
 
     private fun initView() {
-        viewPagerbtn = findViewById(R.id.viewPagerLayout)
+       var  mAdapter = MainMenuAdapter(this, mTitle)
+
+        //menu
+        val gridLayoutManager = GridLayoutManager(this, 2)
+        mBinding.recycler.layoutManager = gridLayoutManager
+        mBinding.recycler.adapter = mAdapter
+        mAdapter.setOnItemClickListener(object : MainMenuAdapter.OnItemListener{
+            override fun onClick(position: Int) {
+                when(position){
+                    0->{//前缀树
+                        var intent = Intent(this@MainUIActivity,TrieTreeActivity::class.java)
+                        startActivity(intent)
+                    }
+
+                }
+            }
+        })
     }
 
-    private fun initLinsener() {
-        viewPagerbtn.setOnClickListener(this)
-    }
 
-    override fun onClick(v: View?) {
-       when(v){
-           viewPagerbtn -> {
 
-               var intent = Intent(this@MainUIActivity, ViewPager2Activity::class.java)
-               startActivity(intent)
-           }
-       }
-    }
 }

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/input"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:hint="写入添加的数据"
+                    android:paddingStart="20dp"
+                    />
+
+                <Button
+                    android:id="@+id/btn"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:text="添加"
+                    />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchInput"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:hint="写入搜索的数据"
+                android:paddingStart="20dp"
+                />
+
+            <Button
+                android:id="@+id/searchBtn"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="联想搜索"
+                />
+            <Button
+                android:id="@+id/allSearchBtn"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:text="全词搜索"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</layout>
