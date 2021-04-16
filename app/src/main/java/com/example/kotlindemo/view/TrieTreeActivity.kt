@@ -9,9 +9,8 @@ import androidx.databinding.DataBindingUtil
 import com.example.kotlindemo.R
 import com.example.kotlindemo.bean.Person
 import com.example.kotlindemo.databinding.ActivityTrieTreeBinding
-import com.example.kotlindemo.leetcode.Rob
+import com.example.kotlindemo.leetcode.MaxChildString
 import com.example.kotlindemo.leetcode.Trie
-import java.time.Period
 
 /**
  * 前缀树处理
@@ -20,7 +19,7 @@ import java.time.Period
 class TrieTreeActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var mBinding :ActivityTrieTreeBinding
     lateinit var trie:Trie
-    val nums = intArrayOf(2,3,2,1,3)
+    val nums = intArrayOf(3,2,4)
     var person = Person()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,15 +39,10 @@ class TrieTreeActivity : AppCompatActivity(), View.OnClickListener {
        when(v){
 
            mBinding.btn->{//添加按钮
-               var rob = Rob()
-               rob.rob(nums)
-               Log.i("11","-->${  rob.rob(nums)}")
-//               val text:String? = mBinding.input.text.toString()
-//               if (text!=null&&text!=""){
-//                   //添加元素
-//                   val m =  trie.insert(text)
-//                   trie.outputTree()
-//               }
+               Log.i("11","-->点击了")
+            var maxChildString = MaxChildString()
+               maxChildString.lengthOfLongestSubstring(mBinding.input.text.toString())
+
            }
 
            mBinding.searchBtn ->{//联想搜索
