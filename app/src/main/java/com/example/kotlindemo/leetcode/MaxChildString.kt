@@ -65,37 +65,64 @@ class MaxChildString {
 //        return map.size
 //    }
 
-    //2.划玻璃法
+//    //2.划玻璃法(假)
+//    fun lengthOfLongestSubstring(s: String): Int {
+//
+//        if (s==""){
+//            return 0
+//        }
+//
+//        val mChars = s.toCharArray()
+//        var size = 0
+//
+//        if (mChars.size ==1){
+//            return 1
+//        }
+//
+//        for (i in mChars.indices){
+//            var hashSet = HashSet<String>()
+//            var mCount = 0
+//            loop@for (j in i until mChars.size){
+//                if (hashSet.add(mChars[j].toString())){
+//                    mCount ++
+//                }else{
+//                    size = Math.max(size,mCount)
+//                    break@loop
+//                }
+//            }
+//            if (mCount > size){
+//                size = mCount
+//            }
+//        }
+//        return size
+//    }
+
+
+    //3.hashSet
     fun lengthOfLongestSubstring(s: String): Int {
+        var hashSet = HashSet<Char>()
+        //左边下标
+        var left = 0
+        //右边下标
+        var right = 0
 
-        if (s==""){
-            return 0
-        }
+        var num = 0
+       // var mChars = s.toCharArray()
 
-        val mChars = s.toCharArray()
-        var size = 0
+        for ( i in s.indices){
+            hashSet.remove(s[i])
+             while (left < s.length && !(hashSet.contains(s[left]))){
 
-        if (mChars.size ==1){
-            return 1
-        }
-
-
-        for (i in mChars.indices){
-            var hashSet = HashSet<String>()
-            var mCount = 0
-            for (j in i until mChars.size){
-                if (hashSet.add(mChars[i].toString())){
-                    mCount ++
-                }else{
-                    size = Math.max(size,mCount)
-                    break
-                }
+                hashSet.add(s[left])
+                left++
             }
-            if (mCount == mChars.size){
-                size = mCount
-            }
+
+            num = max(num,left -i)
+
         }
-        return size
+
+            return  num
     }
+
 
 }

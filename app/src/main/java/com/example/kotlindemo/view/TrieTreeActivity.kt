@@ -9,8 +9,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.kotlindemo.R
 import com.example.kotlindemo.bean.Person
 import com.example.kotlindemo.databinding.ActivityTrieTreeBinding
-import com.example.kotlindemo.leetcode.MaxChildString
-import com.example.kotlindemo.leetcode.Trie
+import com.example.kotlindemo.leetcode.*
 
 /**
  * 前缀树处理
@@ -24,9 +23,10 @@ class TrieTreeActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this,R.layout.activity_trie_tree)
-
         initView()
     }
+
+
 
     private fun initView() {
         trie = Trie()
@@ -40,9 +40,10 @@ class TrieTreeActivity : AppCompatActivity(), View.OnClickListener {
 
            mBinding.btn->{//添加按钮
                Log.i("11","-->点击了")
-            var maxChildString = MaxChildString()
-               maxChildString.lengthOfLongestSubstring(mBinding.input.text.toString())
-
+               val twoMatrix = TwoMatrix()
+               val m =   twoMatrix.searchMatrix(arrayOf(intArrayOf(1,4,7,11,15),intArrayOf(2,5,8,12,19)
+                   ,intArrayOf(3,6,9,16,22) ,intArrayOf(10,13,14,17,24) ,intArrayOf(18,21,23,26,30)),5)
+               Log.i("11","-->点击了${m}")
            }
 
            mBinding.searchBtn ->{//联想搜索
