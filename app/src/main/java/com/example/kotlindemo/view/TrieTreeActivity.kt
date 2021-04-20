@@ -40,9 +40,8 @@ class TrieTreeActivity : AppCompatActivity(), View.OnClickListener {
 
            mBinding.btn->{//添加按钮
                Log.i("11","-->点击了")
-               val twoMatrix = TwoMatrix()
-               val m =   twoMatrix.searchMatrix(arrayOf(intArrayOf(1,4,7,11,15),intArrayOf(2,5,8,12,19)
-                   ,intArrayOf(3,6,9,16,22) ,intArrayOf(10,13,14,17,24) ,intArrayOf(18,21,23,26,30)),5)
+               val twoMatrix = CombineArray()
+               val m =   twoMatrix.merge(intArrayOf(1,2,3,0,0,0),3,intArrayOf(2,5,6),3)
                Log.i("11","-->点击了${m}")
            }
 
