@@ -41,4 +41,13 @@ class MuchNum {
         return  nums[nums.size/2]
 
     }
+
+    fun minSpeedOnTime(dist: IntArray, hour: Double): Int {
+        var maxSize =  dist.size
+        for (element in dist){
+
+        }
+        return 0
+    }
+
 }

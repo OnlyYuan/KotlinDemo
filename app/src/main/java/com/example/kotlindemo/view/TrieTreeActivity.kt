@@ -10,6 +10,10 @@ import com.example.kotlindemo.R
 import com.example.kotlindemo.bean.Person
 import com.example.kotlindemo.databinding.ActivityTrieTreeBinding
 import com.example.kotlindemo.leetcode.*
+import com.example.kotlindemo.leetcode.dongtaiduihua.Fibonacci
+import com.example.kotlindemo.leetcode.dongtaiduihua.JumpGame
+import com.example.kotlindemo.leetcode.dongtaiduihua.JumpGame2
+import com.example.kotlindemo.leetcode.dongtaiduihua.RaidPlunder
 
 /**
  * 前缀树处理
@@ -40,9 +44,9 @@ class TrieTreeActivity : AppCompatActivity(), View.OnClickListener {
 
            mBinding.btn->{//添加按钮
                Log.i("11","-->点击了")
-               val twoMatrix = CombineArray()
-               val m =   twoMatrix.merge(intArrayOf(1,2,3,0,0,0),3,intArrayOf(2,5,6),3)
-               Log.i("11","-->点击了${m}")
+               val twoMatrix = RLEIterator(intArrayOf(3,8,0,9,2,5))
+              // val m =   twoMatrix.(intArrayOf(2,3,1,1,4))
+              // Log.i("11","-->点击了${m}")
            }
 
            mBinding.searchBtn ->{//联想搜索
@@ -66,7 +70,4 @@ class TrieTreeActivity : AppCompatActivity(), View.OnClickListener {
            }
        }
     }
-
-
-
 }

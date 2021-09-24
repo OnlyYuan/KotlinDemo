@@ -15,7 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.TrieTreeActivity"></activity>
+        <activity android:name=".view.LoadMoreActivity"></activity>
+        <activity android:name=".view.CircleColorActivity" />
+        <activity android:name=".view.JiexiActivity" />
+        <activity android:name=".view.TrieTreeActivity" />
         <activity android:name=".ViewPager2Activity" />
         <activity android:name=".MainUIActivity">
             <intent-filter>
@@ -25,6 +28,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <service
+            android:name=".service.AidlService"
+            android:enabled="true"
+            android:exported="true" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -38,12 +38,14 @@ class ViewPager2Activity : AppCompatActivity() {
         fragmentList =ArrayList<Fragment>()
         fragmentList?.add(fragment1)
         fragmentList?.add(fragment2)
+
         var adpter=MyFragmentAdpter(this@ViewPager2Activity,fragmentList)
 
         mview_pager.adapter =adpter
        // mview_pager.setPageTransformer()
         TabLayoutMediator(mtabs,mview_pager){
                 tab, position -> tab.text ="${mtabStrings[position]}"
+
 
         }.attach()
 

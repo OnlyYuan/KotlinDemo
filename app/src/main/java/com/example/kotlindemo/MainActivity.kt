@@ -1,5 +1,6 @@
 package com.example.kotlindemo
 
+import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -36,7 +37,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : Activity(), View.OnClickListener {
     lateinit var cameraBinding: ActivityMainBinding
     var mCameraImagePath: String? = null
     var mCameraUri: Uri? = null
@@ -77,6 +78,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         checkPermssion();
         getTokenMsg();
         //getTokenMsgByOK();
+  
     }
 
 

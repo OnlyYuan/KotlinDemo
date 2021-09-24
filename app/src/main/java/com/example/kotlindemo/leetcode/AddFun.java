@@ -1,5 +1,9 @@
 package com.example.kotlindemo.leetcode;
 
+import android.os.Looper;
+
+import java.util.ArrayList;
+
 /**
  * 两数之和
  * 给你两个 非空 的链表，表示两个非负的整数。它们每位数字都是按照 逆序 的方式存储的，并且每个节点只能存储 一位 数字。
@@ -9,11 +13,11 @@ package com.example.kotlindemo.leetcode;
  */
 public class AddFun {
 
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode p1 = l1;
         ListNode p2 = l2;
         ListNode mListNode = new ListNode();
-
         ListNode tentListNode = mListNode;
         //当前舍去10后的数字
         int tempValue = 0;
@@ -42,6 +46,7 @@ public class AddFun {
         ListNode next;
 
         ListNode() {
+
         }
 
         ListNode(int val) {
