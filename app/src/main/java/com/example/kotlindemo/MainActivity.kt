@@ -319,6 +319,7 @@ class MainActivity : Activity(), View.OnClickListener {
      * 获取token
      */
     fun getTokenMsg() {
+        Log.v("MainActivity", "---->开始请求")
         //日志拦截器(body)
         var httpLoggingInterceptor = HttpLoggingInterceptor()
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)

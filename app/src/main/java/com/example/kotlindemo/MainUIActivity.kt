@@ -14,12 +14,13 @@ import com.example.kotlindemo.databinding.ActivityMainUIBinding
 import com.example.kotlindemo.view.CircleColorActivity
 import com.example.kotlindemo.view.JiexiActivity
 import com.example.kotlindemo.view.TrieTreeActivity
+import com.example.kotlindemo.view.ViewFlipperActivity
 
 
 class MainUIActivity : Activity(){
 
     lateinit var mBinding:ActivityMainUIBinding
-    private val mTitle = arrayOf("前缀树","解析","CircleColor")
+    private val mTitle = arrayOf("前缀树","解析","CircleColor","viewFlipper")
 
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,9 @@ class MainUIActivity : Activity(){
         initView()
 
     }
+
+    /** https协议*忽略证书验证*/
+
 
     private fun initView() {
        var  mAdapter = MainMenuAdapter(this, mTitle)
@@ -56,6 +60,12 @@ class MainUIActivity : Activity(){
                         var intent = Intent(this@MainUIActivity,CircleColorActivity::class.java)
                         startActivity(intent)
                     }
+                    3->{//viewFlipper
+
+                        var intent = Intent(this@MainUIActivity,ViewFlipperActivity::class.java)
+                        startActivity(intent)
+                    }
+
                 }
             }
         })

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoStart="true"
+            android:flipInterval="9000"
+            tools:ignore="UselessParent"
+            >
+
+            <LinearLayout
+                android:id="@+id/flipperLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingStart="45dp"
+                android:orientation="horizontal"
+
+                >
+
+                <ImageView
+                    android:id="@+id/auth_flipper_tips_icon1"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <com.example.kotlindemo.utils.MarqeeView
+                    android:id="@+id/authFlipperText1"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="7dp"
+                    android:text="商户资料完善成功！恭喜您获得授权页面使用权，就此打开您的商业世界！"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:singleLine="true"
+                    android:scrollHorizontally="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+
+                <TextView
+                    android:id="@+id/authFlipperBtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="点击2"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:focusable="true"
+                    android:clickable="true"
+
+                    />
+
+
+                <ImageView
+                    android:id="@+id/authFlipperCloseBtn1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_marginEnd="42dp"
+                    android:scaleType="center"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_marginStart="15dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/flipperLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="45dp"
+
+              >
+
+                <ImageView
+                    android:id="@+id/authFlipperTipsIcon2"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <com.example.kotlindemo.utils.MarqeeView
+                    android:id="@+id/authFlipperText2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="7dp"
+                    android:text="商户资料未完善，请先完善商户资料！若N天内未完善商户资料，您将失去授权页面的使用权。"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:scrollHorizontally="true"
+
+                    android:singleLine="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+
+                <TextView
+                    android:id="@+id/authFlipperBtn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="完善资料"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/authFlipperCloseBtn2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_marginEnd="42dp"
+                    android:scaleType="center"
+                    android:focusable="true"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/flipperLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="45dp"
+
+             >
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@mipmap/ic_launcher"/>
+
+                <com.example.kotlindemo.utils.MarqeeView
+                    android:id="@+id/authFlipperText3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="7dp"
+                    android:text="您还未进行车主认证，请先进行车主认证！若N天内未完成车主认证，您将失去授权页面的使用权。"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    />
+
+                <TextView
+                    android:id="@+id/authFlipperBtn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="车主认证"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_marginStart="15dp"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:focusable="true"
+                    android:clickable="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/authFlipperCloseBtn3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_marginEnd="42dp"
+                    android:scaleType="center"
+                    android:focusable="true"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+       </ViewFlipper>
+
+
+    </LinearLayout>
+
+
+</layout>
